@@ -32,7 +32,8 @@ dist/
 /media/
 /node_modules/
 /static/
-
+saleor/static/assets
+saleor/wsgi
 webpack-bundle.json
 /templates/templated_email/compiled/*
 !/templates/templated_email/compiled/.gitkeep
