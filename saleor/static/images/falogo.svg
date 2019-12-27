@@ -1,0 +1,8 @@
+<svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .heavy { font-family: "Kaleidos"; }
+    .Rrrrr { fill: #44bd32;   }
+  </style>
+  <text x="130" y="40" class="heavy">Algeria</text>
+  <text x="10" y="40" class="heavy Rrrrr">Fitness</text>
+</svg>

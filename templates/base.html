@@ -27,7 +27,6 @@
 
   {% include 'favicon.html' %}
   {% render_bundle 'storefront' 'css' attrs='async' %}
-
   {% block stylesheet %}{% endblock stylesheet %}
 
   {% block meta_tags %}
@@ -116,11 +115,11 @@
         <div class="row no-gutters">
           <div class="col-8 col-md-4 navbar__logo">
             <div class="menu-icon-mobile d-md-none navbar__brand__menu-toggle closed open">
-              <svg data-src="{% static "images/mobile-menu.svg" %}" width="28px" height="20px"/>
+              <!-- <svg data-src="{% static "images/fennec.svg" %}" width="28px" height="20px"/> -->
             </div>
-            <a href="{% url 'home' %}">
-              <svg data-src="{% static "images/logo-light.svg" %}"/>
-            </a>
+            <!-- <a href="{% url 'home' %}">
+              <svg data-src="{% static "images/fennec.svg" %}"/>
+            </a> -->
           </div>
           <div class="col-2 col-md-5 navbar__search static">
             {% if SEARCH_IS_ENABLED %}
