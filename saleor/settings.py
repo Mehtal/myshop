@@ -626,14 +626,17 @@ USE_JSON_CONTENT = get_bool_from_env("USE_JSON_CONTENT", False)
 #     )
 # }
 
+DB_HOST = os.environ.get("DB_HOST")
+DB_NAME = os.environ.get("DB_NAME")
+DB_PASSWORD = os.environ.get("DB_PASSWORD")
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Candlelight',
+        'NAME': DB_NAME,
         'USER': 'blackflame',
-        'PASSWORD': os.environ['dbpassword'],
-        'HOST': '/cloudsql/fitnessalgeria:europe-west6:blackflame',
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
         # 'PORT': '5432',
     }
 }
