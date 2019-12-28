@@ -620,12 +620,6 @@ PLUGINS = [
 USE_JSON_CONTENT = get_bool_from_env("USE_JSON_CONTENT", False)
 
 
-# DATABASES = {
-#     "default": dj_database_url.config(
-#         default="postgres://blackflame:mypassword@/cloudsql/buoyant-aileron-261621:europe-west1:zerowingdb:5432/candlelight", conn_max_age=600
-#     )
-# }
-
 DB_HOST = os.environ.get("DB_HOST")
 DB_NAME = os.environ.get("DB_NAME")
 DB_PASSWORD = os.environ.get("DB_PASSWORD")

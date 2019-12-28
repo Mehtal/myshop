@@ -162,3 +162,10 @@
     }
   }
 }
+
+.mylogo {
+
+  font-family: Kaleidos;
+  font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1600 - 300)));
+ 
+}
