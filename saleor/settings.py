@@ -637,6 +637,6 @@ DATABASES = {
         'USER': 'blackflame',
         'PASSWORD': DB_PASSWORD,
         'HOST': DB_HOST,
-        # 'PORT': '5432',
+        #'PORT': '5432',
     }
 }
