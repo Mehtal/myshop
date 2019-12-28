@@ -331,8 +331,8 @@ AUTH_PASSWORD_VALIDATORS = [
     }
 ]
 
-DEFAULT_COUNTRY = os.environ.get("DEFAULT_COUNTRY", "US")
-DEFAULT_CURRENCY = os.environ.get("DEFAULT_CURRENCY", "USD")
+DEFAULT_COUNTRY = os.environ.get("DEFAULT_COUNTRY", "DZ")
+DEFAULT_CURRENCY = os.environ.get("DEFAULT_CURRENCY", "DZD")
 DEFAULT_DECIMAL_PLACES = get_currency_fraction(DEFAULT_CURRENCY)
 DEFAULT_MAX_DIGITS = 12
 DEFAULT_CURRENCY_CODE_LENGTH = 3
@@ -619,6 +619,12 @@ PLUGINS = [
 # False to use the old editor from dashboard 1.0
 USE_JSON_CONTENT = get_bool_from_env("USE_JSON_CONTENT", False)
 
+
+# DATABASES = {
+#     "default": dj_database_url.config(
+#         default="postgres://blackflame:mypassword@/cloudsql/buoyant-aileron-261621:europe-west1:zerowingdb:5432/candlelight", conn_max_age=600
+#     )
+# }
 
 DB_HOST = os.environ.get("DB_HOST")
 DB_NAME = os.environ.get("DB_NAME")
