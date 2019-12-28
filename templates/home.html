@@ -2,6 +2,13 @@
 {% load i18n %}
 {% load static %}
 {% block content %}
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
   <div class="home">
     <div class="row">
       <div class="col-sm-12 home__block1 my-3">

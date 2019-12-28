@@ -59,7 +59,7 @@ def _handle_order_placement(request, checkout):
 
     # remove checkout after order is created
     checkout.delete()
-
+    messages.success(request, 'Your Order was made successfully!')
     # Redirect the user to the payment page
     # return redirect("order:payment", token=order.token)
     return redirect("home")
