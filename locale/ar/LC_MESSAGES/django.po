@@ -25,7 +25,7 @@ msgstr ""
 #: saleor/account/__init__.py:28
 msgctxt "Event from a customer that got their account created"
 msgid "The account account was created"
-msgstr ""
+msgstr "تم فتح حسابك بنجاح"
 
 #: saleor/account/__init__.py:35
 msgctxt "Event from a customer that got the password reset link sent by email"
@@ -35,12 +35,12 @@ msgstr ""
 #: saleor/account/__init__.py:42
 msgctxt "Event from a customer that reset their password"
 msgid "The account password was reset"
-msgstr ""
+msgstr "تم إعادة تعيين كلمة مرور الحساب"
 
 #: saleor/account/__init__.py:48
 msgctxt "Event from a customer that placed an order"
 msgid "An order was placed"
-msgstr ""
+msgstr "تم وضع الطلب"
 
 #: saleor/account/__init__.py:55
 msgctxt "Event from a customer that added a note to one of their orders"
@@ -50,7 +50,7 @@ msgstr ""
 #: saleor/account/__init__.py:62
 msgctxt "Event from a customer that downloaded an ordered digital good"
 msgid "A digital good was downloaded"
-msgstr ""
+msgstr "تمت إضافة ملاحظة"
 
 #: saleor/account/__init__.py:69
 msgctxt "Event from a staff user that deleted a customer"
@@ -5904,7 +5904,7 @@ msgstr "التنزيلات الرقمية"
 #: templates/home.html:51
 msgctxt "Homepage title"
 msgid "Featured products"
-msgstr ""
+msgstr "المنتجات المتميزة"
 
 #: templates/materializecssform/field.html:32
 #: templates/materializecssform/field.html:59
