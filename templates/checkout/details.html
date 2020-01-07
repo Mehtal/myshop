@@ -6,27 +6,12 @@
 
 {% block title %}{% trans "Checkout" context "Checkout page title" %} — {{ block.super }}{% endblock %}
 
-{% block header %}
-  <div class="container-fluid navbar__login">
-    <div class="container">
-      <p>{% trans "Easy and secure!" context "Checkout top message" %}</p>
-    </div>
-  </div>
-  <header class="checkout__header">
-    <div class="container">
-      <a href="{% url 'home'%}">
-        <svg data-src="{% static "images/logo-light.svg" %}" height="48px" width="176px" />
-      </a>
-      <h1>{% trans "Checkout" context "Checkout title" %}</h1>
-    </div>
-  </header>
-{% endblock %}
 
 {% block footer %}
 {% endblock %}
 
 {% block content %}
-  <div class="row checkout">
+  <div class="row checkout my-5">
     <div class="col-md-7">
       {% block forms %}{% endblock %}
     </div>
