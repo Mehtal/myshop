@@ -55,6 +55,12 @@ def products_for_homepage(user, homepage_collection):
     return products
 
 
+def category_for_homepage(user, category):
+    products = products_visible_to_user(user)
+    products = products.filter(category__id=category)
+    return products
+
+
 def get_product_images(product):
     """Return list of product images that will be placed in product gallery."""
     return list(product.images.all())

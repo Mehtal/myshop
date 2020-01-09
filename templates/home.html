@@ -31,6 +31,14 @@
         </div>
       </div>
     {% endif %}
+    {% if products %}
+      <div class="home__featured">
+        <h2 class="text-center">{% trans "Featured products" context "Homepage title" %}</h2>
+        <div class="row">
+          {% include "product/mass_items.html" %}
+        </div>
+      </div>
+    {% endif %}
     <script type="application/ld+json">{{ webpage_schema|safe }}</script>
   </div>
 {% endblock %}

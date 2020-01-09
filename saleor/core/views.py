@@ -8,7 +8,7 @@ from impersonate.views import impersonate as orig_impersonate
 
 from ..account.models import User
 from ..dashboard.views import staff_member_required
-from ..product.utils import products_for_homepage
+from ..product.utils import products_for_homepage, category_for_homepage
 from ..product.utils.availability import products_with_availability
 from ..seo.schema.webpage import get_webpage_schema
 
@@ -17,6 +17,7 @@ def home(request):
     products = products_for_homepage(
         request.user, request.site.settings.homepage_collection
     )[:20]
+    mass = category_for_homepage(request.user, 3)[:5]
     products = list(
         products_with_availability(
             products,
@@ -33,6 +34,7 @@ def home(request):
         {
             "parent": None,
             "products": products,
+            "mass": mass,
             "webpage_schema": json.dumps(webpage_schema, cls=SafeJSONEncoder),
         },
     )
