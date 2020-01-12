@@ -6311,30 +6311,23 @@ msgstr "Payer pour la commande"
 
 #: templates/order/details.html:68
 msgid "upload proof of payment images"
-msgstr ""
+msgstr "soumises les images de preuve de paiement"
 
 #: templates/order/details.html:76
-#, fuzzy
-#| msgid "No images"
 msgid "upload images"
-msgstr "Aucune photo"
+msgstr "soumises les images"
 
 #: templates/order/details.html:87
-#, fuzzy
-#| msgid "No images"
 msgid "upload"
-msgstr "Aucune photo"
+msgstr "télécharger"
 
 #: templates/order/details.html:97
 msgid "images you've submitted"
-msgstr ""
+msgstr "images que vous avez soumises"
 
 #: templates/order/details.html:101
-#, fuzzy
-#| msgctxt "Dashboard action"
-#| msgid "Select images"
 msgid "delete image"
-msgstr "Sélectionner des photos"
+msgstr "Supprimer l'image"
 
 #: templates/order/details.html:109
 msgctxt "Customer order note"
