@@ -1,5 +1,5 @@
 from django.conf.urls import url
-
+from django.urls import path
 from ..core import TOKEN_PATTERN
 from . import views
 
@@ -31,4 +31,6 @@ urlpatterns = [
         views.connect_order_with_user,
         name="connect-order-with-user",
     ),
+    path("payment-proof/<int:order_pk>", views.order_image_create, name="images"),
+    path("image-delete/<int:image_pk>", views.order_image_delete, name="image-delete"),
 ]

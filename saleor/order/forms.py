@@ -6,7 +6,28 @@ from ..account.forms import SignupForm
 from ..payment import gateway
 from ..payment.models import Payment
 from . import events
-from .models import Order
+from .models import Order, OrderImage
+
+
+class OrderImageForm(forms.ModelForm):
+
+    class Meta:
+        model = OrderImage
+        exclude = ("order", "sort_order" , "Description")
+        labels = {
+            "image": pgettext_lazy("Order image", "Image"),
+            "alt": pgettext_lazy("Description", "Description"),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.instance.image:
+            self.fields["image"].widget = ImagePreviewWidget()
+
+    def save(self, commit=True):
+        image = super().save(commit=commit)
+        # create_product_thumbnails.delay(image.pk)
+        return image
 
 
 def get_gateways():

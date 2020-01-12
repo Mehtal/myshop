@@ -17,7 +17,7 @@ def home(request):
     products = products_for_homepage(
         request.user, request.site.settings.homepage_collection
     )[:20]
-    mass = category_for_homepage(request.user, 3)[:5]
+    mass = category_for_homepage(request.user, 3)[:8]
     products = list(
         products_with_availability(
             products,

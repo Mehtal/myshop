@@ -21,6 +21,11 @@ from ..shipping.models import ShippingMethod
 from . import events
 
 
+
+def get_order_images(order):
+    """Return list of product images that will be placed in product gallery."""
+    return list(order.images.all())
+
 def order_line_needs_automatic_fulfillment(line: OrderLine) -> bool:
     """Check if given line is digital and should be automatically fulfilled."""
     digital_content_settings = get_default_digital_content_settings()

@@ -43,7 +43,7 @@
   {# so we don't show all details (like shipping address) #}
   {# unless current user is owner of the order.           #}
 
-  <div class="row order-details">
+<div class="row order-details">
     <div class="col-lg-10 m-auto">
       <h2 class="order-details__header">
         {% blocktrans trimmed with payment_status=order.get_payment_status_display order_status=order.get_status_display context "Order detail text" %}
@@ -56,26 +56,69 @@
             {% trans "Payment details" context "Order details link text" %}
           </a>
         {% else %}
-       <!--    <a href="{% url "order:payment" token=order.token %}" class="btn btn-primary"> -->
+          <!-- <a href="{% url "order:payment" token=order.token %}" class="btn btn-primary"> -->
             {% trans "Pay for order" context "Order details primary action" %}
           </a>
         {% endif %}
       {% endif %}
       {% include "order/_ordered_items_table.html" %}
-      <div class="order-notes">
-      {% if order.customer_note %}
-        <h2 class="order-notes__header">{% trans "Your note" context "Customer order note" %}</h2>
-        <p>{{ order.customer_note }}</p>
-      {% endif %}
-      {% if order.is_open and not order.customer_note %}
-        <form method="post" class="form-group">
-          {% csrf_token %}
-          <h2>{% trans "Add a note to your order" context "Order note title" %}</h2>
-          {% bootstrap_form note_form display_labels=False %}
-          <input type="submit" value="{% trans 'Submit note' context 'Customer panel - order details: add note submit button' %}" class="btn btn-primary" />
+      
+      <div class="row my-5">
+        <div class="col-12">
+        <h2 >{% trans "upload proof of payment images"  %}</h2>
+        <form method="post" enctype="multipart/form-data" action="{% url 'order:images' order.pk %}">
+          <div class="card-content">
+            {% csrf_token %}
+            <div class="row">
+
+              <div class="custom-file">
+              <input class="custom-file-input" id="id_image_0" name="image_0" type="file">
+              <label class="custom-file-label" for="id_image_0">{% trans "upload images" %}</label>
+              </div>
+            </div>
+          </div>
+          <div class="card-action right-align">
+            {% if order_image.pk %}
+              <button type="submit" class="btn btn-primary">
+                {% trans "Save"  %}
+              </button>
+            {% else %}
+              <button type="submit" class="btn btn-primary">
+                {% trans "upload"  %}
+              </button>
+            {% endif %}
+          </div>
         </form>
-      {% endif %}
+        </div>
       </div>
+       {% if order.images.first %}
+        <div class="row mb-2">
+        <div class="col-12">
+        <h2>{% trans "images you've submitted"  %}</h2>
+        {% for img in order.images.all %}
+          <div class="col-xs-12 col-md-6 my-5">
+            <img class="w-100" src="{{img.image.url}}" alt="payment image">
+            <a class="btn btn-danger btn-block py-3" href="{% url 'order:image-delete' img.pk %} ">{% trans "delete image"  %}</a>
+          </div>
+        {% endfor %}
+        {% endif %}
+        </div>
+        </div>
+        <div class="order-notes">
+        {% if order.customer_note %}
+          <h2 class="order-notes__header">{% trans "Your note" context "Customer order note" %}</h2>
+          <p>{{ order.customer_note }}</p>
+        {% endif %}
+        {% if order.is_open and not order.customer_note %}
+          <form method="post" class="form-group">
+            {% csrf_token %}
+            <h2>{% trans "Add a note to your order" context "Order note title" %}</h2>
+            {% bootstrap_form note_form display_labels=False %}
+            <input type="submit" value="{% trans 'Submit note' context 'Customer panel - order details: add note submit button' %}" class="btn btn-primary" />
+          </form>
+        {% endif %}
+        </div>
+      
     </div>
   </div>
 {% endblock content %}

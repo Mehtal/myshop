@@ -26,6 +26,13 @@ from ..payment import ChargeStatus, TransactionKind
 from ..shipping.models import ShippingMethod
 from . import FulfillmentStatus, OrderEvents, OrderStatus
 
+from versatileimagefield.fields import PPOIField, VersatileImageField
+from ..core.models import (
+    ModelWithMetadata,
+    PublishableModel,
+    PublishedQuerySet,
+    SortableModel,)
+
 
 class OrderQueryset(models.QuerySet):
     def confirmed(self):
@@ -332,6 +339,22 @@ class Order(ModelWithMetadata):
 
     def get_total_weight(self):
         return self.weight
+
+
+class OrderImage(SortableModel):
+    order = models.ForeignKey(
+        Order, related_name="images", on_delete=models.CASCADE
+    )
+    image = VersatileImageField(upload_to="orders", ppoi_field="ppoi", blank=False)
+    ppoi = PPOIField()
+    alt = models.CharField(max_length=128, blank=True)
+
+    class Meta:
+        ordering = ("sort_order",)
+        app_label = "order"
+
+    def get_ordering_queryset(self):
+        return self.order.images.all()
 
 
 class OrderLineQueryset(models.QuerySet):

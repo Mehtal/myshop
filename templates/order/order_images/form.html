@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load materializecss %}
+{% load static %}
+
+{% block content %}
+  <div class="row my-5">
+    <div class="col s12 l9">
+      <div class="card">
+        <form method="post" enctype="multipart/form-data">
+          <div class="card-content">
+            {% csrf_token %}
+            <div class="row">
+              <div class="custom-file">
+              <input class="custom-file-input" id="id_image_0" name="image_0" type="file">
+              <label class="custom-file-label" for="id_image_0">Choose file</label>
+              </div>
+            </div>
+          </div>
+          <div class="card-action right-align">
+            <button class="btn btn-danger btn-primary"><a href="{{order.get_absolute_url}}" >
+              {% trans "Cancel" context "Dashboard cancel action" %}
+            </a></button>
+            {% if product_image.pk %}
+              <button type="submit" class="btn btn-primary">
+                {% trans "Save" context "Dashboard update action" %}
+              </button>
+            {% else %}
+              <button type="submit" class="btn btn-primary">
+                {% trans "Create" context "Dashboard create action" %}
+              </button>
+            {% endif %}
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col s12 m3 help-box"></div>
+  </div>
+{% endblock %}
+  <div class="row my-5">
+    <div class="col s12 l9">
+      <div class="card">
+        <form method="post" enctype="multipart/form-data">
+          <div class="card-content">
+            {% csrf_token %}
+            <div class="row">
+              {{ form.image|materializecss }}
+            </div>
+            <div class="row">
+              {{ form.alt|materializecss }}
+            </div>
+          </div>
+          <div class="card-action right-align">
+            <button class="btn btn-danger btn-primary"><a href="{{order.get_absolute_url}}" >
+              {% trans "Cancel" context "Dashboard cancel action" %}
+            </a></button>
+            {% if product_image.pk %}
+              <button type="submit" class="btn btn-primary">
+                {% trans "Save" context "Dashboard update action" %}
+              </button>
+            {% else %}
+              <button type="submit" class="btn btn-primary">
+                {% trans "Create" context "Dashboard create action" %}
+              </button>
+            {% endif %}
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col s12 m3 help-box"></div>
+  </div>

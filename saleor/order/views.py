@@ -16,9 +16,9 @@ from ..core.utils import get_client_ip
 from ..payment import ChargeStatus, TransactionKind, gateway as payment_gateway
 from ..payment.utils import create_payment, fetch_customer_id
 from . import FulfillmentStatus
-from .forms import CustomerNoteForm, PasswordForm, PaymentDeleteForm, PaymentsForm
-from .models import Order
-from .utils import attach_order_to_user, check_order_status
+from .forms import CustomerNoteForm, PasswordForm, PaymentDeleteForm, PaymentsForm, OrderImageForm
+from .models import Order, OrderImage
+from .utils import attach_order_to_user, check_order_status, get_order_images
 
 logger = logging.getLogger(__name__)
 
@@ -41,8 +41,34 @@ def details(request, token):
                 note_form.save(user=request.user)
                 return redirect("order:details", token=order.token)
     fulfillments = order.fulfillments.exclude(status=FulfillmentStatus.CANCELED)
-    ctx = {"order": order, "fulfillments": fulfillments, "note_form": note_form}
+    order_images = get_order_images(order)
+    ctx = {"order": order, "fulfillments": fulfillments, "note_form": note_form, "order_images": order_images}
+
     return TemplateResponse(request, "order/details.html", ctx)
+
+
+def order_image_create(request, order_pk):
+    order = get_object_or_404(Order, pk=order_pk)
+    order_image = OrderImage(order=order)
+    form = OrderImageForm(
+        request.POST or None, request.FILES or None, instance=order_image
+    )
+    if form.is_valid():
+        order_image = form.save()
+        msg = pgettext_lazy("Dashboard message", "Added image %s") % (
+            order_image.image.name,
+        )
+        messages.success(request, msg)
+        return redirect(order.get_absolute_url())
+    ctx = {"form": form, "order": order, "order_image": order_image}
+    return TemplateResponse(request, "order/order_images/form.html", ctx)
+
+
+def order_image_delete(request, image_pk):
+    image = get_object_or_404(OrderImage, pk=image_pk)
+    order = get_object_or_404(Order, pk=image.order.pk)
+    image.delete()
+    return redirect(order.get_absolute_url())
 
 
 def payment(request, token):
