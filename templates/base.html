@@ -12,7 +12,7 @@
   {% block meta %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Saleor">
+    <meta name="generator" content="fintess Algeria Shop">
     <meta name="theme-color" content="#333333">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -28,7 +28,7 @@
   {% include 'favicon.html' %}
   {% render_bundle 'storefront' 'css' attrs='async' %}
   {% block stylesheet %}{% endblock stylesheet %}
-
+  
   {% block meta_tags %}
     <meta property="og:title" content="{{ site.settings.translated.header_text }}">
     <meta property="og:description" content="{{ site.settings.translated.description }}">
@@ -48,14 +48,11 @@
 <body>
 {% block header %}
   <header class="navbar" role="navigation">
-    <div class="navbar__login container-fluid {% if user.is_impersonate %} bg-warning{% endif %}">
+    <div class="navbar__login container-fluid {% if user.is_impersonate %} bg-warning {% else %} bg-success {% endif %}  " >
       <div class=" d-none d-md-block container">
       <div class="row">
-        <div class="col-6">
-          <p class="text-left">{{ site.settings.translated.header_text }}</p>
-        </div>
-        <div class="col-6">
-          <ul class="float-right">
+        <div class="col-12 text-center">
+          <ul class="">
             {% get_available_languages as LANGUAGES %}
 
             {# We display language picker only if there're languages to pick from #}
@@ -191,7 +188,7 @@
   {% endblock content %}
 </div>
 {% block footer %}
-<!--   <footer class="footer">
+  <footer class="footer">
   <div class="footer__menus">
     <div class="container">
       <div class="row">
@@ -257,29 +254,14 @@
         <div class="offset-md-2 col-md-4 col-12">
           <div class="footer__menus__social-container">
             <div class="footer__menus__social">
-              <a target="_blank" rel="noopener" class="social-footer" href="https://www.facebook.com/mirumeelabs/">
+              <a target="_blank" rel="noopener" class="social-footer" href="#" style="background-color: #3b5998">
                 <svg data-src="{% static "images/facebook-logo.svg" %}" width="45px" height="45px"/>
               </a>
-              <a target="_blank" rel="noopener" class="social-footer" href="https://github.com/mirumee/saleor">
-                <svg data-src="{% static "images/github-logo.svg" %}" width="45px" height="45px"/>
+              <a target="_blank" rel="noopener" class="social-footer" href="#" style="background-color: #00acee">
+                <svg data-src="{% static "images/twitter-logo.svg" %}" width="45px" height="45px" />
               </a>
-              <a target="_blank" rel="noopener" class="social-footer" href="https://twitter.com/getsaleor">
-                <svg data-src="{% static "images/twitter-logo.svg" %}" width="45px" height="45px"/>
-              </a>
-              <a target="_blank" rel="noopener" class="social-footer" href="https://plus.google.com/+Mirumee">
-                <svg data-src="{% static "images/google-logo.svg" %}" width="45px" height="45px"/>
-              </a>
-              <a target="_blank" rel="noopener" class="social-footer" href="https://www.meetup.com/Mirumee-Talks/">
-                <svg data-src="{% static "images/meetup-logo.svg" %}" width="45px" height="45px"/>
-              </a>
-              <a target="_blank" rel="noopener" class="social-footer" href="https://linkedin.com/company/mirumee-software">
-                <svg data-src="{% static "images/linkedin-logo.svg" %}" width="45px" height="45px"/>
-              </a>
-              <a target="_blank" rel="noopener" class="social-footer" href="https://dribbble.com/mirumee">
-                <svg data-src="{% static "images/dribbble-logo.svg" %}" width="45px" height="45px"/>
-              </a>
-              <a target="_blank" rel="noopener" class="social-footer" href="https://www.instagram.com/explore/tags/mirumee/">
-                <svg data-src="{% static "images/instagram-logo.svg" %}" width="45px" height="45px"/>
+              <a target="_blank" rel="noopener" class="social-footer" href="#" style="background-color: #e4717a">
+                <svg data-src="{% static "images/instagram-logo.svg" %}" width="45px" height="45px" />
               </a>
             </div>
           </div>
@@ -287,19 +269,7 @@
       </div>
     </div>
   </div>
-  <div class="footer__copy">
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <a href="{% url 'home' %}" class="footer__logo float-md-left">
-            <svg data-src="{% static "images/logo-light.svg" %}"/>
-          </a>
-        </div>
-        <div class="col-8 footer__copy-text">COPYRIGHT © 2009–2019 MIRUMEE SOFTWARE</div>
-      </div>
-    </div>
-  </div>
-  </footer> -->
+  </footer>
 {% endblock %}
 {% block footer_scripts %}
   <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
@@ -308,6 +278,5 @@
 {% if LANGUAGES|length > 1 %}
   {% include "_language_picker_modal.html" %}
 {% endif %}
-
 </body>
 </html>

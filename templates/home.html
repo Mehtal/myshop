@@ -7,7 +7,7 @@
   <div class="home">
     <div class="row">
       <div class="col-sm-12 home__block1 my-3">
-        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselIndicators" class="carousel slide carousel-fade"  data-ride="carousel" data-interval="5000">
           <div class="carousel-inner carousel-responsive" role="listbox">
             <div class="carousel-item active">
               <img class="d-block w-100" src="{% static 'images/b1.png' %}"  alt="First slide">
@@ -23,19 +23,12 @@
       </div>
     </div>
 
+    {% include "product/_brands.html" %}
     {% if products %}
       <div class="home__featured">
         <h2 class="text-center">{% trans "Featured products" context "Homepage title" %}</h2>
         <div class="row">
           {% include "product/_items.html" %}
-        </div>
-      </div>
-    {% endif %}
-    {% if products %}
-      <div class="home__featured">
-        <h2 class="text-center">{% trans "mass products" context "Homepage title" %}</h2>
-        <div class="row">
-          {% include "product/mass_items.html" %}
         </div>
       </div>
     {% endif %}

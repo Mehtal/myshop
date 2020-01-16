@@ -219,7 +219,8 @@
     }
   }
   &__brand {
-    background-color: $green-darner-tail;
+    background-color: $white;
+    border-bottom: 1px solid $gray;
     @include media-breakpoint-down(sm) {
       position: fixed;
       top: 0;
