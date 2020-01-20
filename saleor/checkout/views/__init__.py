@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template.response import TemplateResponse
 
-from ...account.forms import LoginForm
+from ...account.forms import LoginForm, SignupForm
 from ...core.taxes import get_display_price, quantize_price, zero_taxed_money
 from ...core.utils import format_money, get_user_shipping_country, to_local_currency
 from ..forms import CheckoutShippingMethodForm, CountryForm, ReplaceCheckoutLineForm
@@ -38,7 +38,7 @@ def checkout_login(request, checkout):
     """Allow the user to log in prior to checkout."""
     if request.user.is_authenticated:
         return redirect("checkout:start")
-    ctx = {"form": LoginForm()}
+    ctx = {"form": LoginForm(), "signup_form": SignupForm()}
     return TemplateResponse(request, "checkout/login.html", ctx)
 
 

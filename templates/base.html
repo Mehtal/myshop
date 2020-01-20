@@ -118,7 +118,7 @@
             <!-- <a href="{% url 'home' %}">
               <svg data-src="{% static "images/fennec.svg" %}"/>
             </a> -->
-            <a style="color:black" href="{% url 'home' %}"><span class="mylogo"><strong class="text-primary">Fitness</strong> Algeria</span></a>
+            <a  href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="logo"> </a>
           </div>
           <div class="col-2 col-md-5 navbar__search static">
             {% if SEARCH_IS_ENABLED %}
@@ -214,11 +214,11 @@
                     {% trans "Dashboard" context "Main navigation item" %}
                   </a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="{% url "styleguide" %}" target="_blank">
                     {% trans "Style guide" context "Main navigation item" %}
                   </a>
-                </li>
+                </li> -->
               {% endif %}
               <li>
                 <a href="{% url "account:details" %}">
@@ -254,13 +254,13 @@
         <div class="offset-md-2 col-md-4 col-12">
           <div class="footer__menus__social-container">
             <div class="footer__menus__social">
-              <a target="_blank" rel="noopener" class="social-footer" href="#" style="background-color: #3b5998">
+              <a target="_blank" rel="noopener" class="social-footer" href="https://www.facebook.com/Algeria-Fitness-1633151410151337/" style="background-color: #3b5998">
                 <svg data-src="{% static "images/facebook-logo.svg" %}" width="45px" height="45px"/>
               </a>
-              <a target="_blank" rel="noopener" class="social-footer" href="#" style="background-color: #00acee">
+              <a target="_blank" rel="noopener" class="social-footer" href="https://www.facebook.com/Algeria-Fitness-1633151410151337/" style="background-color: #00acee">
                 <svg data-src="{% static "images/twitter-logo.svg" %}" width="45px" height="45px" />
               </a>
-              <a target="_blank" rel="noopener" class="social-footer" href="#" style="background-color: #e4717a">
+              <a target="_blank" rel="noopener" class="social-footer" href="https://www.instagram.com/algeria_fitness07/" style="background-color: #e4717a">
                 <svg data-src="{% static "images/instagram-logo.svg" %}" width="45px" height="45px" />
               </a>
             </div>

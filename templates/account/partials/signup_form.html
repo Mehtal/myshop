@@ -1,0 +1,20 @@
+{% load bootstrap_form from bootstrap4 %}
+{% load static %}
+{% load i18n %}
+
+
+     
+        <form method="post" action="{% url 'account:signup' %}">
+          <fieldset>
+            <h3>{% trans "Create an account" context "Signup form title" %}</h3>
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% if REDIRECT_FIELD_VALUE %}
+              <input type="hidden" name="{{ REDIRECT_FIELD_NAME }}" value="{{ REDIRECT_FIELD_VALUE }}"/>
+            {% endif %}
+          </fieldset>
+          <button type="submit" class="btn btn-primary narrow">
+            {% trans "Create an account" context "Signup form primary action" %}
+          </button>
+        </form>
+     

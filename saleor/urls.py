@@ -65,3 +65,6 @@ if settings.DEBUG:
 
 if settings.ENABLE_SILK:
     urlpatterns += [url(r"^silk/", include("silk.urls", namespace="silk"))]
+
+
+
