@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+{% if messages %}
+{% endif %}
+
+<div class="row">
+	<div class="col-12 text-center">
+		<h1 class="text-center text-primary text-capitalize my-5">thank you </h1><hr/>
+		<p class="text-center text-capitalize my-5">{% trans "one of our agent will call you soon to confirm your purchase" %}  </p><hr/>
+		{% if user.is_authenticated %}
+		<a href="{% url 'account:details' %}" class="btn btn-primary text-center text-capitalize my-5">{% trans "go to order list" %} </a>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

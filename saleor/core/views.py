@@ -40,6 +40,14 @@ def home(request):
     )
 
 
+def thankyou(request):
+    return TemplateResponse(
+        request,
+        "thankyou.html",
+        {
+        })
+
+
 @staff_member_required
 def styleguide(request):
     return TemplateResponse(request, "styleguide.html")

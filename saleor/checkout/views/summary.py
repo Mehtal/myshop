@@ -62,7 +62,7 @@ def _handle_order_placement(request, checkout):
     messages.success(request, 'Your Order was made successfully!')
     # Redirect the user to the payment page
     # return redirect("order:payment", token=order.token)
-    return redirect("home")
+    return redirect("thankyou")
 
 
 def summary_with_shipping_view(request, checkout):
