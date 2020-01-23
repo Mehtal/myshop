@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-11 20:22+0100\n"
+"POT-Creation-Date: 2020-01-23 20:44+0100\n"
 "PO-Revision-Date: 2017-02-08 11:00+0000\n"
 "Last-Translator: Patryk Zawadzki <patrys@room-303.com>, 2019\n"
 "Language-Team: Arabic (https://www.transifex.com/mirumee/teams/34782/ar/)\n"
@@ -46,7 +46,7 @@ msgstr "تم وضع الطلب"
 #: saleor/account/__init__.py:56
 msgctxt "Event from a customer that added a note to one of their orders"
 msgid "A note was added"
-msgstr ""
+msgstr "تمت إضافة ملاحظة"
 
 #: saleor/account/__init__.py:63
 msgctxt "Event from a customer that downloaded an ordered digital good"
@@ -336,7 +336,7 @@ msgstr "تم تغيير كلمة المرور بنجاح ."
 #: saleor/account/views.py:123
 msgctxt "Storefront message"
 msgid "Account successfully updated."
-msgstr ""
+msgstr "تم تحديث الحساب بنجاح."
 
 #: saleor/account/views.py:139
 msgctxt "Storefront message"
@@ -497,12 +497,12 @@ msgstr "انتهت صلاحية القسيمة في الوقت الحالي. ت�
 #: saleor/checkout/utils.py:1028
 msgctxt "Gift card not applicable"
 msgid "Gift card has expired. Order placement cancelled."
-msgstr ""
+msgstr "انتهت صلاحية بطاقة الهدية. تم إلغاء الطلب."
 
 #: saleor/checkout/views/discount.py:67
 msgctxt "Checkout warning"
 msgid "This voucher has expired. Please review your checkout."
-msgstr ""
+msgstr "انتهت صلاحية هذه القسيمة. يرجى مراجعة كاونتر الدفع الخاص بك."
 
 #: saleor/checkout/views/summary.py:43
 msgctxt "Checkout warning"
@@ -546,7 +546,7 @@ msgstr "أي دولة "
 msgid "Be aware admin pirate! API runs in read-only mode!"
 msgstr ""
 
-#: saleor/core/views.py:53
+#: saleor/core/views.py:61
 msgctxt "Impersonation message"
 msgid "You are now logged as {}"
 msgstr "أنت الآن مسجل دخول ك{}"
@@ -579,7 +579,7 @@ msgstr "%"
 #: saleor/discount/__init__.py:24
 msgctxt "Voucher: discount for"
 msgid "Entire order"
-msgstr ""
+msgstr "طلب كامل"
 
 #: saleor/discount/__init__.py:25
 msgctxt "Voucher: discount for"
@@ -589,7 +589,7 @@ msgstr "الشحن"
 #: saleor/discount/__init__.py:29
 msgctxt "Voucher: discount for"
 msgid "Specific products, collections and categories"
-msgstr ""
+msgstr "منتجات ومجموعات وفئات محددة"
 
 #: saleor/discount/models.py:103
 msgctxt "Voucher type"
@@ -625,7 +625,7 @@ msgstr "هذا العرض صالح فقط للطلبات التي تزيد عن 
 #: saleor/discount/models.py:166
 msgctxt "Voucher not applicable"
 msgid "This offer is valid only once per customer."
-msgstr ""
+msgstr "هذا العرض ساري مرة واحدة فقط لكل عميل"
 
 #: saleor/discount/models.py:232
 msgctxt "Permission description"
@@ -854,7 +854,7 @@ msgstr ""
 #: saleor/giftcard/models.py:61
 msgctxt "Permission description"
 msgid "Manage gift cards."
-msgstr ""
+msgstr "إدارة بطاقات الهدايا."
 
 #: saleor/graphql/core/filters.py:8
 msgid "Enter a list of values."
@@ -957,7 +957,7 @@ msgstr ""
 #: saleor/order/__init__.py:129
 msgctxt "Event from a user or anonymous user that placed their order"
 msgid "The order was placed"
-msgstr ""
+msgstr "تم وضع الطلب"
 
 #: saleor/order/__init__.py:136
 msgctxt "Event from a staff user that placed a draft order"
@@ -993,7 +993,7 @@ msgstr ""
 #: saleor/order/__init__.py:180
 msgctxt "Event generated from a user action that led to a email being sent"
 msgid "The email was sent"
-msgstr ""
+msgstr "تم إرسال البريد الإلكتروني"
 
 #: saleor/order/__init__.py:188
 msgctxt ""
@@ -1668,7 +1668,7 @@ msgid "Your profile"
 msgstr "ملفك الشخصي"
 
 #: templates/account/details.html:19 templates/account/password_change.html:8
-#: templates/base.html:83 templates/base.html:228
+#: templates/base.html:80 templates/base.html:225
 #: templates/order/details.html:23 templates/order/payment.html:23
 #: templates/order/payment/details.html:17
 msgctxt "Main navigation item"
@@ -1825,6 +1825,18 @@ msgstr "الفيسبوك"
 msgid "Google"
 msgstr "جوجل"
 
+#: templates/account/partials/signup_form.html:9
+#: templates/account/signup.html:28
+msgctxt "Signup form title"
+msgid "Create an account"
+msgstr "أنشئ حساب"
+
+#: templates/account/partials/signup_form.html:17
+#: templates/account/signup.html:36
+msgctxt "Signup form primary action"
+msgid "Create an account"
+msgstr "أنشئ حساب"
+
 #: templates/account/password_change.html:9
 msgctxt "Password change breadcrumb"
 msgid "Edit"
@@ -1970,59 +1982,49 @@ msgctxt "Signup form secondary action"
 msgid "Log in"
 msgstr "تسجيل دخول"
 
-#: templates/account/signup.html:28
-msgctxt "Signup form title"
-msgid "Create an account"
-msgstr "أنشئ حساب"
-
-#: templates/account/signup.html:36
-msgctxt "Signup form primary action"
-msgid "Create an account"
-msgstr "أنشئ حساب"
-
-#: templates/base.html:77 templates/base.html:217
+#: templates/base.html:74 templates/base.html:214
 msgctxt "Main navigation item"
 msgid "Dashboard"
 msgstr "لوحة التحكم"
 
-#: templates/base.html:88 templates/base.html:234
+#: templates/base.html:85 templates/base.html:231
 msgctxt "Main navigation item"
 msgid "Stop impersonating"
 msgstr "توقف عن الانتحال"
 
-#: templates/base.html:94 templates/base.html:240
+#: templates/base.html:91 templates/base.html:237
 msgctxt "Main navigation item"
 msgid "Log out"
 msgstr "تسجيل خروج"
 
-#: templates/base.html:100 templates/base.html:246
+#: templates/base.html:97 templates/base.html:243
 msgctxt "Main navigation item"
 msgid "Register"
 msgstr "التسجيل ."
 
-#: templates/base.html:104 templates/base.html:251
+#: templates/base.html:101 templates/base.html:248
 msgctxt "Main navigation item"
 msgid "Log in"
 msgstr "تسجيل دخول"
 
-#: templates/base.html:137
+#: templates/base.html:134
 msgid "Search for product"
 msgstr "البحث عن منتج"
 
-#: templates/base.html:141
+#: templates/base.html:138
 msgid "Search"
 msgstr "البحث"
 
-#: templates/base.html:150 templates/base.html:210
+#: templates/base.html:147 templates/base.html:207
 msgctxt "Main navigation item"
 msgid "Your cart"
 msgstr "عربة التسوق الخاصة بك"
 
-#: templates/base.html:204
+#: templates/base.html:201
 msgid "Account"
 msgstr ""
 
-#: templates/base.html:222
+#: templates/base.html:219
 msgctxt "Main navigation item"
 msgid "Style guide"
 msgstr "إرشادات التنسيق"
@@ -2149,22 +2151,7 @@ msgctxt "Checkout login page title"
 msgid "Login"
 msgstr "تسجيل الدخول"
 
-#: templates/checkout/login.html:12
-msgctxt "Checkout login page title"
-msgid "New customer?"
-msgstr "زبون جديد؟"
-
 #: templates/checkout/login.html:18
-msgctxt "Checkout login page new users action"
-msgid "Continue"
-msgstr "متابعة"
-
-#: templates/checkout/login.html:21
-msgctxt "Checkout login page new users message"
-msgid "Registration is not required!"
-msgstr "التسجيل غير مطلوب!"
-
-#: templates/checkout/login.html:26
 msgctxt "Checkout login form title"
 msgid "Existing customer? Log in."
 msgstr "زبون حالي؟ سجل الدخول"
@@ -5969,18 +5956,10 @@ msgid ""
 "  "
 msgstr ""
 
-#: templates/home.html:28
+#: templates/home.html:30
 msgctxt "Homepage title"
 msgid "Featured products"
 msgstr "المنتجات المتميزة"
-
-#: templates/home.html:36
-#, fuzzy
-#| msgctxt "Permission description"
-#| msgid "Manage products."
-msgctxt "Homepage title"
-msgid "mass products"
-msgstr "إدارة المنتجات"
 
 #: templates/materializecssform/field.html:32
 #: templates/materializecssform/field.html:59
@@ -6643,6 +6622,36 @@ msgstr ""
 msgctxt "Fulfillment update email text"
 msgid "You can track your shipment with %(tracking_number)s code."
 msgstr ""
+
+#: templates/thankyou.html:11
+msgid "one of our agent will call you soon to confirm your purchase"
+msgstr ""
+
+#: templates/thankyou.html:13
+#, fuzzy
+#| msgctxt "Modal remove order line title"
+#| msgid "Remove order line"
+msgid "go to order list"
+msgstr "أزل خط الشراء"
+
+#~ msgctxt "Checkout login page title"
+#~ msgid "New customer?"
+#~ msgstr "زبون جديد؟"
+
+#~ msgctxt "Checkout login page new users action"
+#~ msgid "Continue"
+#~ msgstr "متابعة"
+
+#~ msgctxt "Checkout login page new users message"
+#~ msgid "Registration is not required!"
+#~ msgstr "التسجيل غير مطلوب!"
+
+#, fuzzy
+#~| msgctxt "Permission description"
+#~| msgid "Manage products."
+#~ msgctxt "Homepage title"
+#~ msgid "mass products"
+#~ msgstr "إدارة المنتجات"
 
 #~ msgctxt "Voucher: discount for"
 #~ msgid "Specific collections of products"

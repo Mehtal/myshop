@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-11 20:22+0100\n"
+"POT-Creation-Date: 2020-01-23 20:44+0100\n"
 "PO-Revision-Date: 2017-02-08 11:00+0000\n"
 "Last-Translator: benoit barthelet <benoit.barthelet@gmail.com>, 2019\n"
 "Language-Team: French (https://www.transifex.com/mirumee/teams/34782/fr/)\n"
@@ -32,27 +32,27 @@ msgstr ""
 #: saleor/account/__init__.py:29
 msgctxt "Event from a customer that got their account created"
 msgid "The account account was created"
-msgstr ""
+msgstr "Le compte a été créé"
 
 #: saleor/account/__init__.py:36
 msgctxt "Event from a customer that got the password reset link sent by email"
 msgid "Password reset link was sent to the customer"
-msgstr ""
+msgstr "Le lien de réinitialisation du mot de passe a été envoyé au client"
 
 #: saleor/account/__init__.py:43
 msgctxt "Event from a customer that reset their password"
 msgid "The account password was reset"
-msgstr ""
+msgstr "Le mot de passe du compte a été réinitialisé"
 
 #: saleor/account/__init__.py:49
 msgctxt "Event from a customer that placed an order"
 msgid "An order was placed"
-msgstr ""
+msgstr "An order was placed"
 
 #: saleor/account/__init__.py:56
 msgctxt "Event from a customer that added a note to one of their orders"
 msgid "A note was added"
-msgstr ""
+msgstr "Une note a été ajoutée"
 
 #: saleor/account/__init__.py:63
 msgctxt "Event from a customer that downloaded an ordered digital good"
@@ -62,7 +62,7 @@ msgstr ""
 #: saleor/account/__init__.py:70
 msgctxt "Event from a staff user that deleted a customer"
 msgid "A customer was deleted"
-msgstr ""
+msgstr "A customer was deleted"
 
 #: saleor/account/__init__.py:77
 msgctxt "Event from a staff user assigned a new name to a customer"
@@ -72,12 +72,12 @@ msgstr ""
 #: saleor/account/__init__.py:84
 msgctxt "Event from a staff user assigned a new email address to a customer"
 msgid "A customer's email address was edited"
-msgstr ""
+msgstr "Le nom d'un client a été modifié"
 
 #: saleor/account/__init__.py:91
 msgctxt "Event from a staff user assigned a new email address to a customer"
 msgid "A note was added to the customer"
-msgstr ""
+msgstr "Une note a été ajoutée au client"
 
 #: saleor/account/forms.py:73
 msgctxt "Form field"
@@ -262,12 +262,12 @@ msgstr "Numéro de téléphone"
 #: saleor/account/i18n.py:110
 msgctxt "Address"
 msgid "Street address, P.O. box, company name"
-msgstr ""
+msgstr "Adresse, P.O. boîte, nom de l'entreprise"
 
 #: saleor/account/i18n.py:113
 msgctxt "Address"
 msgid "Apartment, suite, unit, building, floor, etc"
-msgstr ""
+msgstr "Appartement, suite, unité, bâtiment, étage, etc."
 
 #: saleor/account/i18n.py:183
 #, fuzzy
@@ -344,7 +344,7 @@ msgstr "Le mot de passe a été mis à jour"
 #: saleor/account/views.py:123
 msgctxt "Storefront message"
 msgid "Account successfully updated."
-msgstr ""
+msgstr "Compte mis à jour avec succès"
 
 #: saleor/account/views.py:139
 msgctxt "Storefront message"
@@ -501,7 +501,7 @@ msgstr "Le bon de réduction a expiré. La commande a donc été annulée."
 #: saleor/checkout/utils.py:1028
 msgctxt "Gift card not applicable"
 msgid "Gift card has expired. Order placement cancelled."
-msgstr ""
+msgstr "La carte-cadeau a expiré. Placement de commande annulé"
 
 #: saleor/checkout/views/discount.py:67
 msgctxt "Checkout warning"
@@ -546,7 +546,7 @@ msgstr "Le monde entier"
 msgid "Be aware admin pirate! API runs in read-only mode!"
 msgstr ""
 
-#: saleor/core/views.py:53
+#: saleor/core/views.py:61
 msgctxt "Impersonation message"
 msgid "You are now logged as {}"
 msgstr "Vous êtes désormais connecté en tant que {}"
@@ -579,7 +579,7 @@ msgstr "%"
 #: saleor/discount/__init__.py:24
 msgctxt "Voucher: discount for"
 msgid "Entire order"
-msgstr ""
+msgstr "Commande entière"
 
 #: saleor/discount/__init__.py:25
 msgctxt "Voucher: discount for"
@@ -589,7 +589,7 @@ msgstr "La livraison"
 #: saleor/discount/__init__.py:29
 msgctxt "Voucher: discount for"
 msgid "Specific products, collections and categories"
-msgstr ""
+msgstr "Produits, collections et catégories spécifiques"
 
 #: saleor/discount/models.py:103
 msgctxt "Voucher type"
@@ -627,7 +627,7 @@ msgstr ""
 #: saleor/discount/models.py:166
 msgctxt "Voucher not applicable"
 msgid "This offer is valid only once per customer."
-msgstr ""
+msgstr "Cette offre n'est valable qu'une seule fois par client"
 
 #: saleor/discount/models.py:232
 msgctxt "Permission description"
@@ -860,7 +860,7 @@ msgstr ""
 
 #: saleor/graphql/core/filters.py:8
 msgid "Enter a list of values."
-msgstr ""
+msgstr "Gérer les cartes cadeaux"
 
 #: saleor/graphql/order/mutations/fulfillments.py:107
 #, python-format
@@ -940,7 +940,7 @@ msgstr "Annulée"
 #: saleor/order/__init__.py:108
 msgctxt "Event from a staff user that created a draft order"
 msgid "The draft order was created"
-msgstr ""
+msgstr "Le projet d'ordre a été créé"
 
 #: saleor/order/__init__.py:115
 msgctxt "Event from a staff user that added products to a draft order"
@@ -955,7 +955,7 @@ msgstr ""
 #: saleor/order/__init__.py:129
 msgctxt "Event from a user or anonymous user that placed their order"
 msgid "The order was placed"
-msgstr ""
+msgstr "la commande a été passée"
 
 #: saleor/order/__init__.py:136
 msgctxt "Event from a staff user that placed a draft order"
@@ -981,7 +981,7 @@ msgstr ""
 #: saleor/order/__init__.py:166
 msgctxt "Event from a payment that made the order to be fully paid"
 msgid "The order was fully paid"
-msgstr ""
+msgstr "La commande a été entièrement payée"
 
 #: saleor/order/__init__.py:173
 msgctxt "Event from a staff user that updated an address of a placed order"
@@ -991,7 +991,7 @@ msgstr ""
 #: saleor/order/__init__.py:180
 msgctxt "Event generated from a user action that led to a email being sent"
 msgid "The email was sent"
-msgstr ""
+msgstr "L'email a été envoyé"
 
 #: saleor/order/__init__.py:188
 msgctxt ""
@@ -1013,7 +1013,7 @@ msgstr ""
 #: saleor/order/__init__.py:210
 msgctxt "Event from a user that generated an unsuccessful payment"
 msgid "The payment was failed"
-msgstr ""
+msgstr "Le paiement a échoué"
 
 #: saleor/order/__init__.py:217
 msgctxt "Event from a staff user that canceled a fulfillment"
@@ -1037,12 +1037,12 @@ msgctxt ""
 "Event from a staff user that updated the tracking code of an existing "
 "fulfillment"
 msgid "The fulfillment's tracking code was updated"
-msgstr ""
+msgstr "Le code de suivi des commandes a été mis à jour"
 
 #: saleor/order/__init__.py:247
 msgctxt "Event from an user that added a note to an order"
 msgid "A note was added to the order"
-msgstr ""
+msgstr "A note was added to the order"
 
 #: saleor/order/__init__.py:254
 msgctxt "An other type of order event containing a message"
@@ -1052,17 +1052,17 @@ msgstr ""
 #: saleor/order/__init__.py:275
 msgctxt "A payment confirmation email was sent"
 msgid "The payment confirmation email was sent"
-msgstr ""
+msgstr "L'e-mail de confirmation de paiement a été envoyé"
 
 #: saleor/order/__init__.py:282
 msgctxt "A shipping confirmation email was sent"
 msgid "The shipping confirmation email was sent"
-msgstr ""
+msgstr "L'email de confirmation d'expédition a été envoyé"
 
 #: saleor/order/__init__.py:289
 msgctxt "A tracking code update confirmation email was sent"
 msgid "The fulfillment tracking code email was sent"
-msgstr ""
+msgstr "Un e-mail de confirmation de mise à jour du code de suivi a été envoyé"
 
 #: saleor/order/__init__.py:296
 msgctxt "A order confirmation email was sent"
@@ -1082,7 +1082,7 @@ msgstr ""
 #: saleor/order/actions.py:214
 msgctxt "Mark order as paid validation error"
 msgid "Orders with payments can not be manually marked as paid."
-msgstr ""
+msgstr "Les commandes avec paiement ne peuvent pas être marquées manuellement comme payées"
 
 #: saleor/order/forms.py:18
 #, fuzzy
@@ -1421,12 +1421,12 @@ msgstr "en rupture de stock"
 #: saleor/product/__init__.py:51
 msgctxt "Attribute input type"
 msgid "Dropdown"
-msgstr ""
+msgstr "Menu déroulant"
 
 #: saleor/product/__init__.py:52
 msgctxt "Attribute input type"
 msgid "Multi Select"
-msgstr ""
+msgstr "Sélection multiple"
 
 #: saleor/product/filters.py:17
 msgctxt "Product list sorting option"
@@ -1467,7 +1467,7 @@ msgstr "Gestion des produits."
 #: saleor/product/models.py:568
 msgctxt "File as a digital product"
 msgid "digital_product"
-msgstr ""
+msgstr "produit_numérique"
 
 #: saleor/search/forms.py:8
 msgctxt "Search form label"
@@ -1667,7 +1667,7 @@ msgid "Your profile"
 msgstr "Votre profile"
 
 #: templates/account/details.html:19 templates/account/password_change.html:8
-#: templates/base.html:83 templates/base.html:228
+#: templates/base.html:80 templates/base.html:225
 #: templates/order/details.html:23 templates/order/payment.html:23
 #: templates/order/payment/details.html:17
 msgctxt "Main navigation item"
@@ -1825,6 +1825,18 @@ msgstr "Facebook"
 msgid "Google"
 msgstr "Google"
 
+#: templates/account/partials/signup_form.html:9
+#: templates/account/signup.html:28
+msgctxt "Signup form title"
+msgid "Create an account"
+msgstr "Créer un compte"
+
+#: templates/account/partials/signup_form.html:17
+#: templates/account/signup.html:36
+msgctxt "Signup form primary action"
+msgid "Create an account"
+msgstr "Créer un compte"
+
 #: templates/account/password_change.html:9
 msgctxt "Password change breadcrumb"
 msgid "Edit"
@@ -1977,59 +1989,49 @@ msgctxt "Signup form secondary action"
 msgid "Log in"
 msgstr "Connexion"
 
-#: templates/account/signup.html:28
-msgctxt "Signup form title"
-msgid "Create an account"
-msgstr "Créer un compte"
-
-#: templates/account/signup.html:36
-msgctxt "Signup form primary action"
-msgid "Create an account"
-msgstr "Créer un compte"
-
-#: templates/base.html:77 templates/base.html:217
+#: templates/base.html:74 templates/base.html:214
 msgctxt "Main navigation item"
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
-#: templates/base.html:88 templates/base.html:234
+#: templates/base.html:85 templates/base.html:231
 msgctxt "Main navigation item"
 msgid "Stop impersonating"
 msgstr "Arrêter de prétendre être ce client"
 
-#: templates/base.html:94 templates/base.html:240
+#: templates/base.html:91 templates/base.html:237
 msgctxt "Main navigation item"
 msgid "Log out"
 msgstr "Se déconnecter"
 
-#: templates/base.html:100 templates/base.html:246
+#: templates/base.html:97 templates/base.html:243
 msgctxt "Main navigation item"
 msgid "Register"
 msgstr "Inscription"
 
-#: templates/base.html:104 templates/base.html:251
+#: templates/base.html:101 templates/base.html:248
 msgctxt "Main navigation item"
 msgid "Log in"
 msgstr "Connexion"
 
-#: templates/base.html:137
+#: templates/base.html:134
 msgid "Search for product"
 msgstr "Rechercher un produit"
 
-#: templates/base.html:141
+#: templates/base.html:138
 msgid "Search"
 msgstr "Recherche"
 
-#: templates/base.html:150 templates/base.html:210
+#: templates/base.html:147 templates/base.html:207
 msgctxt "Main navigation item"
 msgid "Your cart"
 msgstr "Votre panier"
 
-#: templates/base.html:204
+#: templates/base.html:201
 msgid "Account"
 msgstr "Compte"
 
-#: templates/base.html:222
+#: templates/base.html:219
 msgctxt "Main navigation item"
 msgid "Style guide"
 msgstr "Guide stylistique"
@@ -2156,22 +2158,7 @@ msgctxt "Checkout login page title"
 msgid "Login"
 msgstr "Connexion"
 
-#: templates/checkout/login.html:12
-msgctxt "Checkout login page title"
-msgid "New customer?"
-msgstr "Nouveau client ?"
-
 #: templates/checkout/login.html:18
-msgctxt "Checkout login page new users action"
-msgid "Continue"
-msgstr "Continuer"
-
-#: templates/checkout/login.html:21
-msgctxt "Checkout login page new users message"
-msgid "Registration is not required!"
-msgstr "L'enregistrement n'est pas obligatoire !"
-
-#: templates/checkout/login.html:26
 msgctxt "Checkout login form title"
 msgid "Existing customer? Log in."
 msgstr "Déjà client ? Connectez-vous."
@@ -6110,18 +6097,10 @@ msgstr ""
 "de paramètres.\n"
 "  "
 
-#: templates/home.html:28
+#: templates/home.html:30
 msgctxt "Homepage title"
 msgid "Featured products"
 msgstr "Produits à l'affiche"
-
-#: templates/home.html:36
-#, fuzzy
-#| msgctxt "Permission description"
-#| msgid "Manage products."
-msgctxt "Homepage title"
-msgid "mass products"
-msgstr "Gestion des produits."
 
 #: templates/materializecssform/field.html:32
 #: templates/materializecssform/field.html:59
@@ -6850,6 +6829,36 @@ msgstr ""
 msgctxt "Fulfillment update email text"
 msgid "You can track your shipment with %(tracking_number)s code."
 msgstr "Vous pouvez suivre votre envoi avec le code %(tracking_number)s."
+
+#: templates/thankyou.html:11
+msgid "one of our agent will call you soon to confirm your purchase"
+msgstr ""
+
+#: templates/thankyou.html:13
+#, fuzzy
+#| msgctxt "Modal remove order line title"
+#| msgid "Remove order line"
+msgid "go to order list"
+msgstr "Supprimer la ligne de commande"
+
+#~ msgctxt "Checkout login page title"
+#~ msgid "New customer?"
+#~ msgstr "Nouveau client ?"
+
+#~ msgctxt "Checkout login page new users action"
+#~ msgid "Continue"
+#~ msgstr "Continuer"
+
+#~ msgctxt "Checkout login page new users message"
+#~ msgid "Registration is not required!"
+#~ msgstr "L'enregistrement n'est pas obligatoire !"
+
+#, fuzzy
+#~| msgctxt "Permission description"
+#~| msgid "Manage products."
+#~ msgctxt "Homepage title"
+#~ msgid "mass products"
+#~ msgstr "Gestion des produits."
 
 #~ msgctxt "Voucher: discount for"
 #~ msgid "Specific products"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-11 20:22+0100\n"
+"POT-Creation-Date: 2020-01-23 20:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -523,7 +523,7 @@ msgstr ""
 msgid "Be aware admin pirate! API runs in read-only mode!"
 msgstr ""
 
-#: saleor/core/views.py:53
+#: saleor/core/views.py:61
 msgctxt "Impersonation message"
 msgid "You are now logged as {}"
 msgstr ""
@@ -1619,7 +1619,7 @@ msgid "Your profile"
 msgstr ""
 
 #: templates/account/details.html:19 templates/account/password_change.html:8
-#: templates/base.html:83 templates/base.html:228
+#: templates/base.html:80 templates/base.html:225
 #: templates/order/details.html:23 templates/order/payment.html:23
 #: templates/order/payment/details.html:17
 msgctxt "Main navigation item"
@@ -1773,6 +1773,18 @@ msgstr ""
 msgid "Google"
 msgstr ""
 
+#: templates/account/partials/signup_form.html:9
+#: templates/account/signup.html:28
+msgctxt "Signup form title"
+msgid "Create an account"
+msgstr ""
+
+#: templates/account/partials/signup_form.html:17
+#: templates/account/signup.html:36
+msgctxt "Signup form primary action"
+msgid "Create an account"
+msgstr ""
+
 #: templates/account/password_change.html:9
 msgctxt "Password change breadcrumb"
 msgid "Edit"
@@ -1913,59 +1925,49 @@ msgctxt "Signup form secondary action"
 msgid "Log in"
 msgstr ""
 
-#: templates/account/signup.html:28
-msgctxt "Signup form title"
-msgid "Create an account"
-msgstr ""
-
-#: templates/account/signup.html:36
-msgctxt "Signup form primary action"
-msgid "Create an account"
-msgstr ""
-
-#: templates/base.html:77 templates/base.html:217
+#: templates/base.html:74 templates/base.html:214
 msgctxt "Main navigation item"
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:88 templates/base.html:234
+#: templates/base.html:85 templates/base.html:231
 msgctxt "Main navigation item"
 msgid "Stop impersonating"
 msgstr ""
 
-#: templates/base.html:94 templates/base.html:240
+#: templates/base.html:91 templates/base.html:237
 msgctxt "Main navigation item"
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:100 templates/base.html:246
+#: templates/base.html:97 templates/base.html:243
 msgctxt "Main navigation item"
 msgid "Register"
 msgstr ""
 
-#: templates/base.html:104 templates/base.html:251
+#: templates/base.html:101 templates/base.html:248
 msgctxt "Main navigation item"
 msgid "Log in"
 msgstr ""
 
-#: templates/base.html:137
+#: templates/base.html:134
 msgid "Search for product"
 msgstr ""
 
-#: templates/base.html:141
+#: templates/base.html:138
 msgid "Search"
 msgstr ""
 
-#: templates/base.html:150 templates/base.html:210
+#: templates/base.html:147 templates/base.html:207
 msgctxt "Main navigation item"
 msgid "Your cart"
 msgstr ""
 
-#: templates/base.html:204
+#: templates/base.html:201
 msgid "Account"
 msgstr ""
 
-#: templates/base.html:222
+#: templates/base.html:219
 msgctxt "Main navigation item"
 msgid "Style guide"
 msgstr ""
@@ -2092,22 +2094,7 @@ msgctxt "Checkout login page title"
 msgid "Login"
 msgstr ""
 
-#: templates/checkout/login.html:12
-msgctxt "Checkout login page title"
-msgid "New customer?"
-msgstr ""
-
 #: templates/checkout/login.html:18
-msgctxt "Checkout login page new users action"
-msgid "Continue"
-msgstr ""
-
-#: templates/checkout/login.html:21
-msgctxt "Checkout login page new users message"
-msgid "Registration is not required!"
-msgstr ""
-
-#: templates/checkout/login.html:26
 msgctxt "Checkout login form title"
 msgid "Existing customer? Log in."
 msgstr ""
@@ -5885,14 +5872,9 @@ msgid ""
 "  "
 msgstr ""
 
-#: templates/home.html:28
+#: templates/home.html:30
 msgctxt "Homepage title"
 msgid "Featured products"
-msgstr ""
-
-#: templates/home.html:36
-msgctxt "Homepage title"
-msgid "mass products"
 msgstr ""
 
 #: templates/materializecssform/field.html:32
@@ -6547,4 +6529,12 @@ msgstr ""
 #, python-format
 msgctxt "Fulfillment update email text"
 msgid "You can track your shipment with %(tracking_number)s code."
+msgstr ""
+
+#: templates/thankyou.html:11
+msgid "one of our agent will call you soon to confirm your purchase"
+msgstr ""
+
+#: templates/thankyou.html:13
+msgid "go to order list"
 msgstr ""
