@@ -61,7 +61,7 @@ if settings.DEBUG:
     urlpatterns += [
         # static files (images, css, javascript, etc.)
         url(r"^static/(?P<path>.*)$", serve)
-    ] + static("/media/", document_root=settings.MEDIA_ROOT)
+    ]# + static("/media/", document_root=settings.MEDIA_ROOT)
 
 if settings.ENABLE_SILK:
     urlpatterns += [url(r"^silk/", include("silk.urls", namespace="silk"))]
