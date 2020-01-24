@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-24 02:26+0100\n"
+"POT-Creation-Date: 2020-01-24 15:26+0100\n"
 "PO-Revision-Date: 2017-02-08 11:00+0000\n"
 "Last-Translator: Andriy Kovalchuk <tulsluper@gmail.com>, 2019\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mirumee/teams/34782/"
@@ -5954,6 +5954,17 @@ msgid ""
 msgstr ""
 
 #: templates/home.html:30
+#, fuzzy
+#| msgctxt "Dashboard promote action"
+#| msgid "Promote"
+msgid "Promo"
+msgstr "Рекламувати"
+
+#: templates/home.html:33
+msgid "view more"
+msgstr ""
+
+#: templates/home.html:39
 msgctxt "Homepage title"
 msgid "Featured products"
 msgstr "Рекламовані товари"

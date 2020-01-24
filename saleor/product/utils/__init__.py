@@ -51,13 +51,16 @@ def products_for_homepage(user, homepage_collection):
     products = products.prefetch_related(
         "translations", "images", "variants__variant_images__image", "collections"
     )
-    products = products.filter(collections=homepage_collection)
+    # products = products.filter(collections=homepage_collection)
     return products
 
 
-def category_for_homepage(user, category):
+def promo_for_homepage(user):
     products = products_visible_to_user(user)
-    products = products.filter(category__id=category)
+    products = products.prefetch_related(
+        "translations", "images", "variants__variant_images__image", "collections"
+    )
+    products = products.filter(collections__name="promo")
     return products
 
 
