@@ -63,6 +63,8 @@
 </head>
 
 <body>
+{% block fbpixel %}
+{% endblock %}
 {% block header %}
   <header class="navbar" role="navigation">
     <div class="navbar__login container-fluid {% if user.is_impersonate %} bg-warning {% else %} bg-success {% endif %}  " >
