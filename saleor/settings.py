@@ -26,7 +26,7 @@ def get_bool_from_env(name, default_value):
     return default_value
 
 
-DEBUG = os.environ.get['DEBUG'] 
+DEBUG = os.environ.get("DEBUG") 
 
 SITE_ID = 1
 
