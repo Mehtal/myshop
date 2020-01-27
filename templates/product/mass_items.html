@@ -7,7 +7,7 @@
 
  
 {% for product  in products_promo %}
-  <div class="col-xs-12 col-sm-6 col-lg-3 product-list my-5">
+  <div class="col-xs-12 col-sm-6 col-lg-3 product-list my-5 shadow">
     <a href="{{ product.get_absolute_url }}" class="link--clean">
       <div class="text-center">
         <div>
@@ -20,7 +20,24 @@
             </div>
           <span class="product-list-item-name" title="{{ product.translated }}">{{ product.translated }} </span>
         </div>
-       
+        <div class="panel-footer">
+          {% if availability.available %}
+            {% price_range availability.price_range %}
+            {% if availability.on_sale %}
+              {% if availability.price_range_undiscounted.start != availability.price_range.start %}
+                <div class="product-list__sale">
+                  <svg data-src="{% static "images/sale-bg.svg" %}" />
+                  <span class="product-list__sale__text">
+                    {% comment %}Translators: Layout may break if character length is different than four.{% endcomment %}
+                    {% trans "Sale" context "Sale (discount) label for item in product list" %}
+                  </span>
+                </div>
+              {% endif %}
+            {% endif %}
+          {% else %}
+            &nbsp;
+          {% endif %}
+        </div>
       </div>
     </a>
   </div>
