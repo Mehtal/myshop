@@ -17,7 +17,7 @@ def home(request):
     products = products_for_homepage(
         request.user, request.site.settings.homepage_collection
     )[:]
-    promo = promo_for_homepage(request.user)[:8]
+    promo = promo_for_homepage(request.user)[:4]
     products = list(
         products_with_availability(
             products,
@@ -27,6 +27,7 @@ def home(request):
             extensions=request.extensions,
         )
     )
+    webpage_schema = get_webpage_schema(request)
     return TemplateResponse(
         request,
         "home.html",
