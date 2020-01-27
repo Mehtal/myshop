@@ -27,7 +27,6 @@ def home(request):
             extensions=request.extensions,
         )
     )
-    webpage_schema = get_webpage_schema(request)
     return TemplateResponse(
         request,
         "home.html",

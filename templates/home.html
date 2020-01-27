@@ -27,7 +27,7 @@
 
     {% if products_promo %}
     <div class="home__featured">
-        <h2 class="text-center">{% trans "Promo"  %}</h2>
+        <h2 class="text-center">{% trans "Promo" context "home promo"  %}</h2>
         <div class="row">
            {% include "product/mass_items.html" %}
            <a href="{% url 'product:collection' slug='promo' pk=9  %}" class="btn btn-block btn-outline-primary py-3">{% trans "view more" %}</a>

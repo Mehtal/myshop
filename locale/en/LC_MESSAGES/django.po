@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-24 15:26+0100\n"
+"POT-Creation-Date: 2020-01-27 19:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1624,7 +1624,7 @@ msgid "Your profile"
 msgstr ""
 
 #: templates/account/details.html:19 templates/account/password_change.html:8
-#: templates/base.html:80 templates/base.html:225
+#: templates/base.html:99 templates/base.html:244
 #: templates/order/details.html:23 templates/order/payment.html:23
 #: templates/order/payment/details.html:17
 msgctxt "Main navigation item"
@@ -1930,49 +1930,49 @@ msgctxt "Signup form secondary action"
 msgid "Log in"
 msgstr ""
 
-#: templates/base.html:74 templates/base.html:214
+#: templates/base.html:93 templates/base.html:233
 msgctxt "Main navigation item"
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:85 templates/base.html:231
+#: templates/base.html:104 templates/base.html:250
 msgctxt "Main navigation item"
 msgid "Stop impersonating"
 msgstr ""
 
-#: templates/base.html:91 templates/base.html:237
+#: templates/base.html:110 templates/base.html:256
 msgctxt "Main navigation item"
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:97 templates/base.html:243
+#: templates/base.html:116 templates/base.html:262
 msgctxt "Main navigation item"
 msgid "Register"
 msgstr ""
 
-#: templates/base.html:101 templates/base.html:248
+#: templates/base.html:120 templates/base.html:267
 msgctxt "Main navigation item"
 msgid "Log in"
 msgstr ""
 
-#: templates/base.html:134
+#: templates/base.html:153
 msgid "Search for product"
 msgstr ""
 
-#: templates/base.html:138
+#: templates/base.html:157
 msgid "Search"
 msgstr ""
 
-#: templates/base.html:147 templates/base.html:207
+#: templates/base.html:166 templates/base.html:226
 msgctxt "Main navigation item"
 msgid "Your cart"
 msgstr ""
 
-#: templates/base.html:201
+#: templates/base.html:220
 msgid "Account"
 msgstr ""
 
-#: templates/base.html:219
+#: templates/base.html:238
 msgctxt "Main navigation item"
 msgid "Style guide"
 msgstr ""
@@ -5878,6 +5878,7 @@ msgid ""
 msgstr ""
 
 #: templates/home.html:30
+msgctxt "home promo"
 msgid "Promo"
 msgstr ""
 
@@ -6239,7 +6240,7 @@ msgid "Update results"
 msgstr ""
 
 #. Translators: Layout may break if character length is different than four.
-#: templates/product/_items.html:30
+#: templates/product/_items.html:30 templates/product/mass_items.html:32
 msgctxt "Sale (discount) label for item in product list"
 msgid "Sale"
 msgstr ""
@@ -6544,10 +6545,10 @@ msgctxt "Fulfillment update email text"
 msgid "You can track your shipment with %(tracking_number)s code."
 msgstr ""
 
-#: templates/thankyou.html:11
+#: templates/thankyou.html:16
 msgid "one of our agent will call you soon to confirm your purchase"
 msgstr ""
 
-#: templates/thankyou.html:13
+#: templates/thankyou.html:18
 msgid "go to order list"
 msgstr ""

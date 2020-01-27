@@ -5,7 +5,7 @@
 {% load placeholder %}
 
 {% for product, availability in products %}
-  <div class="col-sm-12 col-lg-3 product-list shadow">
+  <div class="col-sm-12 col-lg-3 product-list">
     <a href="{{ product.get_absolute_url }}" class="link--clean">
       <div class="text-center">
         <div>
@@ -20,9 +20,9 @@
         </div>
         <div class="panel-footer">
           {% if availability.available %}
-            {% price_range availability.price_range %}
+           
             {% if availability.on_sale %}
-              {% if availability.price_range_undiscounted.start != availability.price_range.start %}
+              
                 <div class="product-list__sale">
                   <svg data-src="{% static "images/sale-bg.svg" %}" />
                   <span class="product-list__sale__text">
@@ -30,8 +30,6 @@
                     {% trans "Sale" context "Sale (discount) label for item in product list" %}
                   </span>
                 </div>
-              {% endif %}
-            {% endif %}
           {% else %}
             &nbsp;
           {% endif %}
