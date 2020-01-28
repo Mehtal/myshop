@@ -10,13 +10,15 @@
   <div class="row checkout__login">
     <div class="col-12 col-md-6">
       <div class="checkout__login__continue">
-        {% include "account/partials/signup_form.html" with REDIRECT_FIELD_VALUE=checkout_url form=signup_form %}
+        <h3 class="my-1">{% trans 'continue without signup' %}</h3>
+        <div class="row">
+          <a href="{% url 'checkout:shipping-address' %}" class="btn btn-primary">{% trans 'continue'  %} </a>
+        </div>
       </div>
     </div>
     <div class="col-12 col-md-6 checkout__login__form">
-      
-      <h3>{% trans "Existing customer? Log in." context "Checkout login form title" %}</h3>
-      {% include "account/partials/login_form.html" with REDIRECT_FIELD_VALUE=checkout_url %}
+      <h3 class="my-1">{% trans "signup/Log in." context "Checkout login form title" %}</h3>
+       {% include "account/partials/social_login.html" with REDIRECT_FIELD_VALUE=checkout_url  %}
     </div>
   </div>
 {% endblock %}

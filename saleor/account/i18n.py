@@ -157,14 +157,14 @@ class CountryAwareAddressForm(AddressForm):
 
     I18N_MAPPING = [
         ("name", ["first_name", "last_name"]),
-        ("street_address", ["street_address_1", "street_address_2"]),
+        ("street_address", ["street_address_1"]),
         ("city_area", ["city_area"]),
         ("country_area", ["country_area"]),
-        ("company_name", ["company_name"]),
-        ("postal_code", ["postal_code"]),
+        ("company_name", []),
+        ("postal_code", []),
         ("city", ["city"]),
         ("sorting_code", []),
-        ("country_code", ["country"]),
+        ("country_code", []),
     ]
 
     class Meta:

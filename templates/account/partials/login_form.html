@@ -21,7 +21,7 @@
       {% with available_backends=site.settings.available_backends %}
         {% if available_backends %}
           <hr>
-          <div class="row">
+         <!--  <div class="row">
             <div class="col-sm-6 col-md-12 col-xl-6">
               {% if 'facebook' in backends.backends and 'facebook' in available_backends %}
                 <a class="btn social-btn facebook" href="{% url 'social:begin' 'facebook' %}">
@@ -38,7 +38,7 @@
                 </a>
               {% endif %}
             </div>
-          </div>
+          </div> -->
         {% endif %}
       {% endwith %}
     </div>

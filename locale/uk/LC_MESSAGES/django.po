@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 19:26+0100\n"
+"POT-Creation-Date: 2020-01-28 00:53+0100\n"
 "PO-Revision-Date: 2017-02-08 11:00+0000\n"
 "Last-Translator: Andriy Kovalchuk <tulsluper@gmail.com>, 2019\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mirumee/teams/34782/"
@@ -1816,10 +1816,12 @@ msgid "Forgot password?"
 msgstr "Забули пароль?"
 
 #: templates/account/partials/login_form.html:29
+#: templates/account/partials/social_login.html:10
 msgid "Facebook"
 msgstr "Facebook"
 
 #: templates/account/partials/login_form.html:37
+#: templates/account/partials/social_login.html:18
 msgid "Google"
 msgstr "Google"
 
@@ -2153,10 +2155,21 @@ msgctxt "Checkout login page title"
 msgid "Login"
 msgstr "Вхід"
 
-#: templates/checkout/login.html:18
+#: templates/checkout/login.html:13
+msgid "continue without signup"
+msgstr ""
+
+#: templates/checkout/login.html:15
+#, fuzzy
+#| msgctxt "Password reset primary action"
+#| msgid "Continue"
+msgid "continue"
+msgstr "Продовжити"
+
+#: templates/checkout/login.html:20
 msgctxt "Checkout login form title"
-msgid "Existing customer? Log in."
-msgstr "Існуючий покупець? Вхід."
+msgid "signup/Log in."
+msgstr ""
 
 #: templates/checkout/payment.html:9
 msgctxt "Checkout payment title"
@@ -6661,6 +6674,10 @@ msgstr ""
 #| msgid "Remove order line"
 msgid "go to order list"
 msgstr "Видалити рядок замовлення"
+
+#~ msgctxt "Checkout login form title"
+#~ msgid "Existing customer? Log in."
+#~ msgstr "Існуючий покупець? Вхід."
 
 #~ msgctxt "Checkout login page title"
 #~ msgid "New customer?"

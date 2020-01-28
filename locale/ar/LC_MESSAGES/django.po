@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 19:26+0100\n"
+"POT-Creation-Date: 2020-01-28 00:53+0100\n"
 "PO-Revision-Date: 2017-02-08 11:00+0000\n"
 "Last-Translator: Patryk Zawadzki <patrys@room-303.com>, 2019\n"
 "Language-Team: Arabic (https://www.transifex.com/mirumee/teams/34782/ar/)\n"
@@ -1823,10 +1823,12 @@ msgid "Forgot password?"
 msgstr "هل نسيت كلمة السر ؟ "
 
 #: templates/account/partials/login_form.html:29
+#: templates/account/partials/social_login.html:10
 msgid "Facebook"
 msgstr "الفيسبوك"
 
 #: templates/account/partials/login_form.html:37
+#: templates/account/partials/social_login.html:18
 msgid "Google"
 msgstr "جوجل"
 
@@ -2156,10 +2158,21 @@ msgctxt "Checkout login page title"
 msgid "Login"
 msgstr "تسجيل الدخول"
 
-#: templates/checkout/login.html:18
+#: templates/checkout/login.html:13
+msgid "continue without signup"
+msgstr "متابعة الشراء بدون فتح حساب"
+
+#: templates/checkout/login.html:15
+#, fuzzy
+#| msgctxt "Password reset primary action"
+#| msgid "Continue"
+msgid "continue"
+msgstr "متابعة"
+
+#: templates/checkout/login.html:20
 msgctxt "Checkout login form title"
-msgid "Existing customer? Log in."
-msgstr "زبون حالي؟ سجل الدخول"
+msgid "signup/Log in."
+msgstr "تسجيل الدخول"
 
 #: templates/checkout/payment.html:9
 msgctxt "Checkout payment title"
@@ -6650,6 +6663,10 @@ msgstr "سيقوم أحد وكلاءنا بالاتصال بك قريبًا لت
 #| msgid "Remove order line"
 msgid "go to order list"
 msgstr "الذهاب إلى قائمة المشتريات"
+
+#~ msgctxt "Checkout login form title"
+#~ msgid "Existing customer? Log in."
+#~ msgstr "زبون حالي؟ سجل الدخول"
 
 #~ msgctxt "Checkout login page title"
 #~ msgid "New customer?"

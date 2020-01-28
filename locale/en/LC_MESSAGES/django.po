@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-27 19:26+0100\n"
+"POT-Creation-Date: 2020-01-28 00:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1771,10 +1771,12 @@ msgid "Forgot password?"
 msgstr ""
 
 #: templates/account/partials/login_form.html:29
+#: templates/account/partials/social_login.html:10
 msgid "Facebook"
 msgstr ""
 
 #: templates/account/partials/login_form.html:37
+#: templates/account/partials/social_login.html:18
 msgid "Google"
 msgstr ""
 
@@ -2099,9 +2101,17 @@ msgctxt "Checkout login page title"
 msgid "Login"
 msgstr ""
 
-#: templates/checkout/login.html:18
+#: templates/checkout/login.html:13
+msgid "continue without signup"
+msgstr ""
+
+#: templates/checkout/login.html:15
+msgid "continue"
+msgstr ""
+
+#: templates/checkout/login.html:20
 msgctxt "Checkout login form title"
-msgid "Existing customer? Log in."
+msgid "signup/Log in."
 msgstr ""
 
 #: templates/checkout/payment.html:9
