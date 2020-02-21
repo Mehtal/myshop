@@ -3,7 +3,7 @@
  {% with available_backends=site.settings.available_backends %}
         {% if available_backends %}
 <div class="row">
-  <div class="col-12">
+  <div class="col-12 text">
     {% if 'facebook' in backends.backends and 'facebook' in available_backends %}
       <a class="btn social-btn facebook p-3" href="{% url 'social:begin' 'facebook' %}">
         <svg data-src="{% static "images/facebook-logo.svg" %}" width="18" height="18"/>
